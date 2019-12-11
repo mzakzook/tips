@@ -1,11 +1,10 @@
-primeNumbers = (element) => {
-  if (element === 1) {
-    return 2
-  } else if (element <= 0) {
-    return null
+sumPrimeNumbers = (maxValue) => {
+  if (maxValue <= 2) {
+    return 0
   }
+  let sum = 2
   let arr = [2]
-  for (let i = 3; arr.length < element ; i++ ) {
+  for (let i = 3; i < maxValue ; i++ ) {
     let isPrime = true
     for (let y = 0; arr[y] <= Math.sqrt(i) && isPrime ; y++) {
       if (i % arr[y] === 0) {
@@ -14,11 +13,12 @@ primeNumbers = (element) => {
     }
     if (isPrime === true) {
       arr.push(i)
+      sum += i
     }
   }
-  return arr[arr.length - 1]
+  return sum
 }
 
 
-console.log(primeNumbers(10001))
+console.log(sumPrimeNumbers(2000000))
 
