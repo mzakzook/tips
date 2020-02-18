@@ -1,4 +1,4 @@
-primeNumbers = (element) => {
+nthPrimeNumber = (element) => {
   if (element === 1) {
     return 2
   } else if (element <= 0) {
@@ -20,5 +20,5 @@ primeNumbers = (element) => {
 }
 
 
-console.log(primeNumbers(10001))
+console.log(nthPrimeNumber(10001))
 
