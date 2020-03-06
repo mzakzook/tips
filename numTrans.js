@@ -35,33 +35,33 @@ function numTrans( number ) {
 
 }
 
-/* Saam's solution. Hopefully it's correct!
+// Saam's solution. Hopefully it's correct!
 
-let known = new Map; // Just used to ensure non exponential (I think). It's essentially dynamic programming
-function variants(str) {
-    if (!str.length)
-        return [[]];
+// let known = new Map; // Just used to ensure non exponential (I think). It's essentially dynamic programming
+// function variants(str) {
+//     if (!str.length)
+//         return [[]];
 
-    if (known.has(str))
-        return known.get(str);
+//     if (known.has(str))
+//         return known.get(str);
 
-    let result = [];
+//     let result = [];
 
-    for (let i = 0; i < str.length; ++i) {
-        let start = str.slice(0, i + 1);
-        let value = parseInt(start);
-        if (value > 26)
-            break;
-        let rest = variants(str.slice(i + 1, str.length));
-        let combined = rest.map(x => [start, ...x]);
-        result.push(...combined);
-    }
+//     for (let i = 0; i < str.length; ++i) {
+//         let start = str.slice(0, i + 1);
+//         let value = parseInt(start);
+//         if (value > 26)
+//             break;
+//         let rest = variants(str.slice(i + 1, str.length));
+//         let combined = rest.map(x => [start, ...x]);
+//         result.push(...combined);
+//     }
 
-    known.set(str, result);
-    return result;
-}
+//     known.set(str, result);
+//     return result;
+// }
 
-*/
+
 
 
 
