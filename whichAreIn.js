@@ -34,3 +34,7 @@ function inArray(array1,array2){
 
 console.log(inArray(["eat", "pro", "poo", "eak", "eak"], ["Steak", "Feat"]))
 
+console.log(inArray(["eat", "pro", "poo", "eak", "eak"], ["Steak", "Feat"]))
+
+console.log(inArray(["eat", "pro", "poo", "eak", "eak"], ["Steak", "Feat"]))
+
