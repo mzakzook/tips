@@ -9,7 +9,13 @@ function incrementString (string) {
         break
       }
     }
-    return string.slice(0, tracker) + (parseInt(string.slice(tracker)) + 1).toString()
+    let num = (parseInt(string.slice(tracker)) + 1).toString()
+    if (num.length < string.slice(tracker).length) {
+      let dif = string.slice(tracker).length - num.length
+      let zeros = new Array(dif).fill('0')
+      num = zeros.join('') + num
+    }
+    return string.slice(0, tracker) + num
   } else {
     return string + "1"
   }
@@ -21,4 +27,5 @@ console.log(incrementString('foobar001'))
 console.log(incrementString('foobar99'))
 console.log(incrementString('foobar099'))
 console.log(incrementString(''))
+
 
