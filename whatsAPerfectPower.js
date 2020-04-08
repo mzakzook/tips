@@ -13,3 +13,5 @@ var isPP = function(n){
 
 console.log(isPP(78124)) //null
 console.log(isPP(78125)) //[5, 7]
+console.log(isPP(2187)) //[3, 7]
+console.log(isPP(16777216)) //[4096, 2]
