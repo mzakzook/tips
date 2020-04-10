@@ -6,7 +6,6 @@ var countAndSay = function(n) {
   for (let i = 1 ; i < n ; i++) {
       resArr = result.split('')
       for (let y = 1 ; y < resArr.length; y++) {
-          
           if (resArr[y] === resArr[y - 1]) {
               count ++
           } else {
@@ -29,8 +28,7 @@ var countAndSay = function(n) {
       
   }
   return result
-  
 };
 
 
-console.log(countAndSay(7))
+console.log(countAndSay(5))
