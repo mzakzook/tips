@@ -1,8 +1,7 @@
 function primeFactors(n) {
   let resultObj = {}  
   let result = ""
-  if (!smallestPrime(n)) return `(${n})`
-  while (smallestPrime(n)) {
+  while (n !== 1) {
     let small = smallestPrime(n)
     if (resultObj[small.toString()]) {
       resultObj[small.toString()] += 1
@@ -10,13 +9,6 @@ function primeFactors(n) {
       resultObj[small.toString()] = 1
     }
     n = n / small
-  }
-  if (!smallestPrime(n) && n !== 1) {
-    if (resultObj[n.toString()]) {
-      resultObj[n.toString()] += 1
-    } else {
-      resultObj[n.toString()] = 1
-    }
   }
   for (let key in resultObj) {
     if (resultObj[key] === 1) {
@@ -49,9 +41,21 @@ function smallestPrime(n) {
       }
     }
   }
-  return false
+  return n
 }
 
+// function primeFactors(n){
+//   for (var i=2, res="", f; i <= n; i++) {
+//     f=0;
+//     while (n%i == 0) { f++; n/=i }
+//     res += f ? "(" + ( f>1 ? i+"**"+f  : i ) +")" : ""
+//   }
+//   return res 
+// }
 
-console.log(primeFactors(3362))
+
+
+
+
+console.log(primeFactors(86240))
 
