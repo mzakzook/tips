@@ -22,3 +22,5 @@ nthPrimeNumber = (element) => {
 
 console.log(nthPrimeNumber(10001))
 
+console.log(nthPrimeNumber(1000001))
+

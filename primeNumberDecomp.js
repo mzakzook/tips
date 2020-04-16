@@ -30,13 +30,8 @@ function getUniquePrimeFactorsWithCount(n) {
       count = 1
     }
   }
-  if (preResults.slice(-1)[0] === preResults.slice(-2)[0]) {
-    results[0].push(preResults.slice(-1)[0])
-    results[1].push(count)
-  } else {
-    results[0].push(preResults.slice(-1)[0])
-    results[1].push(count)
-  }
+  results[0].push(preResults.slice(-1)[0])
+  results[1].push(count)
   return results
 }
 
@@ -83,4 +78,4 @@ console.log(getUniquePrimeFactorsWithCount(113))
 console.log(getUniquePrimeFactorsWithCount(114))
 
 
-console.log(getUniquePrimeFactorsWithCount(115))
+console.log(getUniquePrimeFactorsWithCount(15485867))
