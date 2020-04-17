@@ -30,7 +30,7 @@ function sortByName(ary) {
   let resObj = {}
   let wordArr = []
 
-  let numArr = ary.forEach(num => {
+  ary.forEach(num => {
     let resStr = ''
     let numStr = num.toString()
     if (numStr.length === 1) {
@@ -60,7 +60,9 @@ function sortByName(ary) {
     if (!resObj[resStr]) resObj[resStr] = num
     wordArr.push(resStr)
   }) 
+  console.log(wordArr.sort())
   return wordArr.sort().map(num => resObj[num])
 }
 
 
+console.log(sortByName([1, 2, 3, 4, 232]))
