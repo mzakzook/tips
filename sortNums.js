@@ -25,7 +25,7 @@
 
 function sortByName(ary) {
   let s = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen']
-  let t = ['ten', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
+  let t = ['twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety']
   let resObj = {}
   let wordArr = []
 
@@ -39,7 +39,7 @@ function sortByName(ary) {
       if (numStr[0] === "1") {
         resStr = s[num]
       } else {
-        resStr += t[numStr[0] - 1]
+        resStr += t[numStr[0] - 2]
         if (numStr[1] > 0) resStr += s[numStr[1]]
       }
     }
@@ -50,7 +50,7 @@ function sortByName(ary) {
       } else if (numStr[1] === '0' && numStr[2] !== '0') {
         resStr += ' ' + s[numStr[2]]
       } else if (numStr[1] !== '0') {
-        resStr += ' ' + t[numStr[1] - 1]
+        resStr += ' ' + t[numStr[1] - 2]
         if (numStr[2] !== '0') {
           resStr += ' ' + s[numStr[2]]
         }
@@ -59,9 +59,11 @@ function sortByName(ary) {
     if (!resObj[resStr]) resObj[resStr] = num
     wordArr.push(resStr)
   }) 
-  console.log(wordArr.sort())
   return wordArr.sort().map(num => resObj[num])
 }
 
 
-console.log(sortByName([1, 2, 3, 4, 232]))
+console.log(sortByName([0, 100, 108, 4, 118, 999]))
+
+
+console.log([3, 1, 57, 16, 14, 63, 2].sort((a, b) => a - b))
