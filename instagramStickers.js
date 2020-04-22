@@ -1,3 +1,5 @@
+// There are stickers that only have letters “instagram”. How many stickers do you need to generate the phrase with only an ‘instagram’ sticker? All letters in phrase will be lowercase, valid letters found in “instagram” and the only other character you may encounter is an empty space.
+
 function stickers_for(phrase) {
   let letC = {'i': 1, 'n': 1, 's': 1, 't': 1, 'a': 2, 'g': 1, 'r': 1, 'm': 1}
   let results = 0
@@ -14,32 +16,34 @@ console.log(stickers_for('taming giant gnats')) // 3
 
 
 
-function stickers_for(phrase) {
-  let instagramLookup = {
-    'i': 1,
-    'n': 1,
-    's': 1,
-    't': 1,
-    'a': 2,
-    'g': 1,
-    'r': 1,
-    'a': 2,
-    'm': 1
-  }
+//Katherine's code
 
-  let phraseLookup = {};
-  let maxStickerCount = 0
+// function stickers_for(phrase) {
+//   let instagramLookup = {
+//     'i': 1,
+//     'n': 1,
+//     's': 1,
+//     't': 1,
+//     'a': 2,
+//     'g': 1,
+//     'r': 1,
+//     'a': 2,
+//     'm': 1
+//   }
 
-  for (let i = 0; i < phrase.length; i++) {
-    if (phrase[i] === ' ') {
-      continue;
-    } else if (phraseLookup[phrase[i]]) {
-      phraseLookup[phrase[i]] += 1;
-    } else {
-      phraseLookup[phrase[i]] = 1;
-    }
-    let stickerCount = phraseLookup[phrase[i]] / instagramLookup[phrase[i]];
-    maxStickerCount = Math.max(stickerCount, maxStickerCount);
-  }
-  return maxStickerCount;
-}
+//   let phraseLookup = {};
+//   let maxStickerCount = 0
+
+//   for (let i = 0; i < phrase.length; i++) {
+//     if (phrase[i] === ' ') {
+//       continue;
+//     } else if (phraseLookup[phrase[i]]) {
+//       phraseLookup[phrase[i]] += 1;
+//     } else {
+//       phraseLookup[phrase[i]] = 1;
+//     }
+//     let stickerCount = phraseLookup[phrase[i]] / instagramLookup[phrase[i]];
+//     maxStickerCount = Math.max(stickerCount, maxStickerCount);
+//   }
+//   return maxStickerCount;
+// }

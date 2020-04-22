@@ -2,20 +2,20 @@
 
 
 
-function funWithAnagrams(text) {
-  let results = [] 
-  let bad = []
-  for (let i = 0; i < text.length ; i++) {
-    results.push(text[i])
-    for (let y = i + 1 ; y < text.length ; y++) {
-      if (text[i].split('').sort().join('') === text[y].split('').sort().join('')) {
-        bad.push(text[y])   
-      }
-    }
-    text = text.filter(x => !bad.includes(x))
-  }
-  return results
-}
+// function funWithAnagrams(text) {
+//   let results = [] 
+//   let bad = []
+//   for (let i = 0; i < text.length ; i++) {
+//     results.push(text[i])
+//     for (let y = i + 1 ; y < text.length ; y++) {
+//       if (text[i].split('').sort().join('') === text[y].split('').sort().join('')) {
+//         bad.push(text[y])   
+//       }
+//     }
+//     text = text.filter(x => !bad.includes(x))
+//   }
+//   return results
+// }
 
 
 //Katherine's code
@@ -86,5 +86,55 @@ function funWithAnagrams(text) {
 // n * (m + m log m + n) + n log n
 
 
-console.log(funWithAnagrams(['code', 'doce', 'ecod', 'framer', 'frame'])) // ['code', 'frame', 'framer']
+console.log(funWithAnagrams(['code', 'doce', 'ecod', 'frream', 'framer', 'fream', 'frame'])) // ['code', 'frame', 'framer']
 console.log(funWithAnagrams(['poke', 'pkoe', 'okpe', 'ekop'])) // ['poke']
+
+// console.log(objEq({'a': 1, 'b': 3}, {'b': 2, 'a': 1}))
+
+function objEq (obj1, obj2) {
+  if (Object.keys(obj1).length === Object.keys(obj2).length) {
+    for (let key in obj1) {
+      if (obj1[key] !== obj2[key]) {
+        return false
+      }
+    } 
+  } else {
+    return false
+  }
+  return true
+}
+
+
+
+
+function funWithAnagrams(text) {
+  let results = []
+  let badWords = []
+  for (let i = 0; i < text.length; i++) {
+    let textObj = {}
+    for (let y = 0; y < text[i].length ; y++) {
+      if (textObj[text[i][y]]) {
+        textObj[text[i][y]] += 1
+      } else {
+        textObj[text[i][y]] = 1
+      }
+    }
+    let match = false
+    for (let z = 0; z < badWords.length ; z++) {
+      if (objEq(badWords[z], textObj)) {
+        match = true
+        break
+      } 
+    }
+    if (!match) {
+      results.push(text[i])
+      badWords.push(textObj)
+    }
+  }
+  return results
+}
+
+
+
+
+
