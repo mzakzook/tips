@@ -18,3 +18,5 @@ function pigLJ(sentence) {
 
 
 console.log(pigLJ('These elephants are way too big but I love them'))
+
+[[wordWgt[indexLookup['i1']], indexLookup['i1'], nums[indexLookup['i1']]], [[wordWgt[indexLookup['i2']], indexLookup['i2'], nums[indexLookup['i2']]]]]
