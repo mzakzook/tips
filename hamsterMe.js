@@ -128,6 +128,8 @@ function hamsterMe(code, message) {
 
 
 
+
+
 console.log(hamsterMe('hmster', 'hamster'))
 console.log(hamsterMe("hamster", "helpme"))
 
