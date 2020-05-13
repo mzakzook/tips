@@ -22,10 +22,27 @@
 // - 10 ^ 5 <= nums[i] <= 10 ^ 5
 
 
+// function checkPossibility(nums) {
+//   let numsCopy = JSON.parse(JSON.stringify(nums))
+//   if (JSON.stringify(numsCopy.sort((a, b) => a - b)) === JSON.stringify(nums)) return true
+//   for (let i = 0; i < nums.length - 1 ; i++) {
+//     let newArr = nums.slice(0, i).concat(nums[i + 1]).concat(nums.slice(i + 1))
+//     let newArrCop = JSON.parse(JSON.stringify(newArr))
+//     if (JSON.stringify(newArrCop.sort((a, b) => a - b)) === JSON.stringify(newArr)) return true      
+//   }
+//   let lastArr = nums.slice(0, -1).concat(Number.MAX_SAFE_INTEGER)
+//   let lastArrCop = JSON.parse(JSON.stringify(lastArr))
+//   if (JSON.stringify(lastArrCop.sort((a, b) => a - b)) === JSON.stringify(lastArr)) return true
+//   return false
+// }
+
 function checkPossibility(nums) {
   let numsCopy = JSON.parse(JSON.stringify(nums))
   if (JSON.stringify(numsCopy.sort((a, b) => a - b)) === JSON.stringify(nums)) return true
+  let count = 0
   for (let i = 0; i < nums.length - 1 ; i++) {
+    if (nums[i] > nums[i + 1]) count += 1
+    if (count > 1) return false
     let newArr = nums.slice(0, i).concat(nums[i + 1]).concat(nums.slice(i + 1))
     let newArrCop = JSON.parse(JSON.stringify(newArr))
     if (JSON.stringify(newArrCop.sort((a, b) => a - b)) === JSON.stringify(newArr)) return true      
@@ -38,7 +55,12 @@ function checkPossibility(nums) {
 
 
 
+
+
+
+
 console.log(checkPossibility([4, 2, 3]))
+console.log(checkPossibility([2,3,3,2,4]))
 
 
 
