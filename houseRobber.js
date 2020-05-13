@@ -16,3 +16,17 @@
 //              Total amount you can rob = 2 + 9 + 1 = 12.
 
 
+function rob(nums) {
+  if (nums.length === 0) return 0
+  if (nums.length === 1) return nums[0]
+  if (nums.length ===2) return Math.max(nums[0], nums[1])
+  let results = new Array(nums.length)
+  results[0] = nums[0]
+  results[1] = Math.max(nums[0], nums[1])
+  for (let i = 2; i < results.length ; i++) {
+      results[i] = Math.max(nums[i] + results[i - 2], results[i - 1])
+  }
+  return results[nums.length - 1]
+}
+
+console.log(rob([5, 1, 8, 100, 70, 1, 1, 1]))
