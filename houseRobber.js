@@ -19,7 +19,7 @@
 function rob(nums) {
   if (nums.length === 0) return 0
   if (nums.length === 1) return nums[0]
-  if (nums.length ===2) return Math.max(nums[0], nums[1])
+  if (nums.length === 2) return Math.max(nums[0], nums[1])
   let results = new Array(nums.length)
   results[0] = nums[0]
   results[1] = Math.max(nums[0], nums[1])
@@ -30,3 +30,40 @@ function rob(nums) {
 }
 
 console.log(rob([5, 1, 8, 100, 70, 1, 1, 1]))
+
+
+function stepper(nums, memo = {}) {
+    if (nums.length in memo) return memo[nums.length];
+    if (nums.length === 0) return true;
+
+    let maxRange = nums[0];
+    for (let step = 1; step <= maxRange; step++) {
+        if (stepper(nums.slice(step), memo)) {
+            memo[nums.length] = true;
+            return true;
+        }
+    }
+    memo[nums.length] = false
+    return false;
+  }
+
+
+//   You are climbing a stair case. It takes n steps to reach to the top.
+
+// Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+
+// Write a function, stepper(nums), that takes in an array of non negative numbers.
+// Each element of the array represents the maximum number of steps you can take from that position in the array.
+// The function should return a boolean indicating if it is possible to travel from the 
+// first position of the array to the last position.
+
+function climbStairs(n) {
+  if (n === 1) return 1
+  let result = []
+  result[1] = 1
+  result[2] = 2
+  for (let i = 3; i <= n ; i++) {
+      result[i] = result[i - 1] + result[i - 2]
+  }
+  return result[n]
+}
