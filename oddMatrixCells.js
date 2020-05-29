@@ -30,14 +30,27 @@
 
 
 function oddCells(n, m, indices) {
-  let mat = new Array(n).fill(new Array(m).fill(0))
+  let mat = new Array(n)
+  for (let x = 0 ; x < n ; x++) {
+    mat[x] = new Array(m).fill(0)
+  }
+  console.log(`Initialized matrix:`)
+  console.log(mat)
   for (let i = 0; i < indices.length ; i++) {
     let ind = indices[i]
+    console.log(`Index ${i + 1}.:`)
+    console.log(ind)
+    console.log('Row loop:')
     for (let y = 0; y < m ; y++) {
       mat[ind[0]][y] += 1
+      console.log('Modified matrix:')
+      console.log(mat)
     }
+    console.log('Column loop:')
     for (let p = 0; p < mat.length ; p++) {
       mat[p][ind[1]] += 1
+      console.log('Modified matrix:')
+      console.log(mat)
     }
   }
   return mat.flat().reduce((acc, item) => {
