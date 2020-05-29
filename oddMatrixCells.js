@@ -35,14 +35,17 @@ function oddCells(n, m, indices) {
     let ind = indices[i]
     for (let y = 0; y < m ; y++) {
       mat[ind[0]][y] += 1
-      console.log(mat)
     }
     for (let p = 0; p < mat.length ; p++) {
       mat[p][ind[1]] += 1
-      console.log(mat)
     }
-    console.log(mat)
   }
+  return mat.flat().reduce((acc, item) => {
+    if (item % 2 !== 0) {
+      acc += 1
+    }
+    return acc
+  }, 0)
 };
 
 
