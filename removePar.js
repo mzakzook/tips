@@ -49,9 +49,7 @@ var removeOuterParentheses = function(S) {
   for (let i = 0; i < S.length ; i++) {
       S[i] === '(' ? start += 1 : end += 1;
       if (start === end) {
-          if (i - ind > 1) {
-              result += S.slice(ind + 1, i);
-          }
+          result += S.slice(ind + 1, i);
           ind = i + 1;
           start = 0;
           end = 0;
@@ -59,3 +57,9 @@ var removeOuterParentheses = function(S) {
   }
   return result;
 };
+
+
+console.log(removeOuterParentheses('(()())(())(()(()))')) // => '()()()()(())'
+console.log(removeOuterParentheses('')) // => ''
+console.log(removeOuterParentheses('()()()')) // => ''
+console.log(removeOuterParentheses('(())()((()))')) // => '()(())'
