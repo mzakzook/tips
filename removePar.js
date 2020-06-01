@@ -38,28 +38,44 @@
 // S is a valid parentheses string
 
 
-
-
 var removeOuterParentheses = function(S) {
-  if (S === "") return S;
-  let start = 0;
-  let end = 0;
+  let bal = 0;
   let ind = 0;
   let result = "";
   for (let i = 0; i < S.length ; i++) {
-      S[i] === '(' ? start += 1 : end += 1;
-      if (start === end) {
+      S[i] === '(' ? bal += 1 : bal -= 1;
+      if (bal === 0) {
           result += S.slice(ind + 1, i);
           ind = i + 1;
-          start = 0;
-          end = 0;
       }
   }
   return result;
 };
+
+// var removeOuterParentheses = function(S) {
+//   if (S === "") return S;
+//   let start = 0;
+//   let end = 0;
+//   let ind = 0;
+//   let result = "";
+//   for (let i = 0; i < S.length ; i++) {
+//       S[i] === '(' ? start += 1 : end += 1;
+//       if (start === end) {
+//           result += S.slice(ind + 1, i);
+//           ind = i + 1;
+//           start = 0;
+//           end = 0;
+//       }
+//   }
+//   return result;
+// };
 
 
 console.log(removeOuterParentheses('(()())(())(()(()))')) // => '()()()()(())'
 console.log(removeOuterParentheses('')) // => ''
 console.log(removeOuterParentheses('()()()')) // => ''
 console.log(removeOuterParentheses('(())()((()))')) // => '()(())'
+
+
+ 
+
