@@ -23,5 +23,21 @@
 
 
 var sumZero = function(n) {
-    
+  if (n === 1) return [0];
+  if (n === 2) return [-1, 1];
+  let result = [];
+  for (let i = parseInt((-1 * (n / 2))); i < 0 ; i++) {
+    result.push(i);
+  }
+  if (n % 2 !== 0) result.push(0);
+  for (let i = 1; i <= parseInt(n / 2) ; i++) {
+    result.push(i);
+  }
+  return result;
 };
+
+
+console.log(sumZero(5)) // => [-2, -1, 0, 1, 2]
+console.log(sumZero(4)) // => [-2, -1, 1, 2]
+console.log(sumZero(3)) // => [-1, 0, 1]
+console.log(sumZero(1)) // => [0]
