@@ -26,6 +26,27 @@
 // 1 <= nums[i] <= 10^3
 
 
+// var shuffle = function(nums, n) {
+//     let result = [];
+//     let mid = nums.length / 2;
+//     let sec = nums.slice(mid);
+//     for (let i = 0; i < mid ; i++) {
+//       result.push(nums[i]);
+//       result.push(sec[i]);
+//     }
+//     return result;
+// };
+
+
 var shuffle = function(nums, n) {
-    
+  let result = [];
+  let sec = nums.slice(n);
+  for (let i = 0; i < n ; i++) {
+    result.push(nums[i]);
+    result.push(sec[i]);
+  }
+  return result;
 };
+
+
+console.log(shuffle([1, 2, 3, 4, 5, 6], 3)); // => [ 1, 4, 2, 5, 3, 6 ]
