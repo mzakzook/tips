@@ -28,8 +28,8 @@
 // var maxProduct = function(nums) {
 //     nums = nums.map(x => x - 1);
 //     let result = Number.MIN_SAFE_INTEGER;
+//     let others = JSON.parse(JSON.stringify(nums));
 //     for (let i = 0; i < nums.length ; i++) {
-//         let others = JSON.parse(JSON.stringify(nums));
 //         others.splice(i, 1);
 //         for (let y = 0; y < others.length ; y++) {
 //             if (nums[i] * others[y] > result) result = nums[i] * others[y];
