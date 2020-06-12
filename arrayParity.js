@@ -16,17 +16,21 @@
 // 1 <= A.length <= 5000
 // 0 <= A[i] <= 5000
 
-var sortArrayByParity = function(A) {
-  let first = [];
-  let second = [];
-  for (let i = 0; i < A.length; i++) {
-      if (A[i] % 2 === 0) {
-          first.push(A[i]);
-      } else {
-          second.push(A[i]);
-      }
-  }
-  return first.concat(second);
+// var sortArrayByParity = function(A) {
+  // let first = [];
+  // let second = [];
+  // for (let i = 0; i < A.length; i++) {
+  //     if (A[i] % 2 === 0) {
+  //         first.push(A[i]);
+  //     } else {
+  //         second.push(A[i]);
+  //     }
+  // }
+  // return first.concat(second);
+// };
+
+function sortArrayByParity(A) {
+  return A.sort((a, b) => (a % 2) - (b % 2));
 };
 
 console.log(sortArrayByParity([3,1,2,4])); // => [2, 4, 3, 1]
