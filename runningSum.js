@@ -31,7 +31,7 @@ var runningSum = function(nums) {
   if (nums.length === 1) return nums[0];
   let result = [nums[0]];
   for (let i = 1; i < nums.length; i++) {
-      result.push(nums.slice(0, i + 1).reduce((a,b) => a + b, 0));
+      result.push(nums[i] + result.slice(-1)[0]);
   }
   return result;
 };
