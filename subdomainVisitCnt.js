@@ -38,33 +38,20 @@ var subdomainVisits = function(cpdomains) {
       let parts = item.split(' ');
       let num = parts[0];
       let url = parts[1].split('.');
-      if (url.length > 2) {
-          if (counts[url.slice(-2).join('.')]) {
-              counts[url.slice(-2).join('.')] += parseInt(num);
-          } else {
-              counts[url.slice(-2).join('.')] = parseInt(num);
-          }
-          if (counts[url.slice(-1)[0]]) {
-              counts[url.slice(-1)[0]] += parseInt(num);
-          } else {
-              counts[url.slice(-1)[0]] = parseInt(num);
-          }
-          result.push(item);
+      if (counts[url.slice(-2).join('.')]) {
+          counts[url.slice(-2).join('.')] += parseInt(num);
       } else {
-          if (counts[url.slice(-2).join('.')]) {
-              counts[url.slice(-2).join('.')] += parseInt(num);
-          } else {
-              counts[url.slice(-2).join('.')] = parseInt(num);
-          }
-          if (counts[url.slice(-1)[0]]) {
-            counts[url.slice(-1)[0]] += parseInt(num);
-          } else {
-              counts[url.slice(-1)[0]] = parseInt(num);
-          }
+          counts[url.slice(-2).join('.')] = parseInt(num);
       }
+      if (counts[url.slice(-1)[0]]) {
+          counts[url.slice(-1)[0]] += parseInt(num);
+      } else {
+          counts[url.slice(-1)[0]] = parseInt(num);
+      }
+      if (url.length > 2) result.push(item);
   }
   for (let key in counts) {
-    result.push(`${counts[key]} ${key}`)
+    result.push(`${counts[key]} ${key}`);
   }
   return result;
 };
