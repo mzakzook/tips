@@ -45,3 +45,4 @@ var removeDuplicates = function(S) {
 
 
 console.log(removeDuplicates("abbaca")); // => "ca"
+
