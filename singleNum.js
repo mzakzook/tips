@@ -26,3 +26,4 @@ var singleNumber = function(nums) {
 
 console.log(singleNumber([2,2,1])); // => 1
 console.log(singleNumber([4,1,2,1,2])); // => 4
+console.log(singleNumber([2, 5, 98, 97, 97, 64, 63, 63, 5, 2, 64])) // => 98
