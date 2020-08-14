@@ -46,7 +46,7 @@
 
 var lemonadeChange = function(bills) {
   let change = {5: 0, 10: 0};
-  for (let i = 0; i < bills[0]; i++) {
+  for (let i = 0; i < bills.length; i++) {
       if (bills[i] === 5) {
           change[5] += 1;
       } else if (bills[i] === 10) {
@@ -57,11 +57,11 @@ var lemonadeChange = function(bills) {
               return false;
           }
       } else if (bills[i] === 20) {
-          if (change[5] > 2) {
-              change[5] -= 3;
-          } else if (change[5] > 0 && change[10] > 0) {
-              change[5] -= 1;
-              change[10] -= 1;
+          if (change[5] > 0 && change[10] > 0) {
+            change[5] -= 1;
+            change[10] -= 1;
+          } else if (change[5] > 2) {
+            change[5] -= 3;
           } else {
               return false;
           }
