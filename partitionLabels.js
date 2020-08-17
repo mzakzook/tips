@@ -17,26 +17,26 @@
 // S will have length in range [1, 500].
 // S will consist of lowercase English letters ('a' to 'z') only.
 
-var partitionLabels = function(S) {
+var partitionLabels = function (S) {
   let result = [];
   let ind = 0;
   for (let i = 1; i < S.length; i++) {
-      if (S.slice(ind, i).includes(S[i])) {
-          continue;
-      } else {
-          let good = true;
-          for (let y = 0; y < result.length; y++) {
-              if (result[y].includes(S[i])) {
-                  result.splice(y);
-                  ind = result.join('').length;
-                  good = false;
-              }
-          }
-          if (good) {
-              result.push(S.slice(ind, i));
-              ind = i;
-          }
+    if (S.slice(ind, i).includes(S[i])) {
+      continue;
+    } else {
+      let isGood = true;
+      for (let y = 0; y < result.length; y++) {
+        if (result[y].includes(S[i])) {
+          result.splice(y);
+          ind = result.join('').length;
+          isGood = false;
+        }
       }
+      if (isGood) {
+        result.push(S.slice(ind, i));
+        ind = i;
+      }
+    }
   }
   result.push(S.slice(ind));
   return result.map(x => x.length);
