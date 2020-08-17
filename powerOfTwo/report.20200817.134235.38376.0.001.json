@@ -1,0 +1,458 @@
+
+{
+  "header": {
+    "reportVersion": 1,
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "trigger": "FatalError",
+    "filename": "report.20200817.134235.38376.0.001.json",
+    "dumpEventTime": "2020-08-17T13:42:35Z",
+    "dumpEventTimeStamp": "1597696955541",
+    "processId": 38376,
+    "cwd": "/Users/zookymac/Development/tips/powerOfTwo",
+    "commandLine": [
+      "node",
+      "powerOfTwo.js"
+    ],
+    "nodejsVersion": "v12.12.0",
+    "wordSize": 64,
+    "arch": "x64",
+    "platform": "darwin",
+    "componentVersions": {
+      "node": "12.12.0",
+      "v8": "7.7.299.13-node.12",
+      "uv": "1.32.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "72",
+      "nghttp2": "1.39.2",
+      "napi": "5",
+      "llhttp": "1.1.4",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.1d",
+      "cldr": "35.1",
+      "icu": "64.2",
+      "tz": "2019a",
+      "unicode": "12.1"
+    },
+    "release": {
+      "name": "node",
+      "headersUrl": "https://nodejs.org/download/release/v12.12.0/node-v12.12.0-headers.tar.gz",
+      "sourceUrl": "https://nodejs.org/download/release/v12.12.0/node-v12.12.0.tar.gz"
+    },
+    "osName": "Darwin",
+    "osRelease": "19.6.0",
+    "osVersion": "Darwin Kernel Version 19.6.0: Sun Jul  5 00:43:10 PDT 2020; root:xnu-6153.141.1~9/RELEASE_X86_64",
+    "osMachine": "x86_64",
+    "cpus": [
+      {
+        "model": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+        "speed": 2700,
+        "user": 12791120,
+        "nice": 0,
+        "sys": 8228880,
+        "idle": 72095070,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+        "speed": 2700,
+        "user": 4385850,
+        "nice": 0,
+        "sys": 2256800,
+        "idle": 86404370,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+        "speed": 2700,
+        "user": 12583080,
+        "nice": 0,
+        "sys": 6019920,
+        "idle": 74444140,
+        "irq": 0
+      },
+      {
+        "model": "Intel(R) Core(TM) i5-5257U CPU @ 2.70GHz",
+        "speed": 2700,
+        "user": 3962200,
+        "nice": 0,
+        "sys": 1949640,
+        "idle": 87135070,
+        "irq": 0
+      }
+    ],
+    "networkInterfaces": [
+      {
+        "name": "lo0",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "127.0.0.1",
+        "netmask": "255.0.0.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "lo0",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "::1",
+        "netmask": "ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff",
+        "family": "IPv6",
+        "scopeid": 0
+      },
+      {
+        "name": "lo0",
+        "internal": true,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::1",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 1
+      },
+      {
+        "name": "en0",
+        "internal": false,
+        "mac": "f4:5c:89:af:af:ef",
+        "address": "fe80::c95:5727:6d39:1ffc",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 4
+      },
+      {
+        "name": "en0",
+        "internal": false,
+        "mac": "f4:5c:89:af:af:ef",
+        "address": "192.168.68.103",
+        "netmask": "255.255.255.0",
+        "family": "IPv4"
+      },
+      {
+        "name": "awdl0",
+        "internal": false,
+        "mac": "72:ef:0a:8a:bb:c0",
+        "address": "fe80::70ef:aff:fe8a:bbc0",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 9
+      },
+      {
+        "name": "llw0",
+        "internal": false,
+        "mac": "72:ef:0a:8a:bb:c0",
+        "address": "fe80::70ef:aff:fe8a:bbc0",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 10
+      },
+      {
+        "name": "utun0",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::b357:c051:e5d6:30fc",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 11
+      },
+      {
+        "name": "utun1",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::e7ed:604a:dfcb:80c",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 12
+      },
+      {
+        "name": "utun2",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::c7bd:d82a:6d24:418",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 14
+      },
+      {
+        "name": "utun3",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::53a2:4d25:9eb4:f4dc",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 15
+      },
+      {
+        "name": "ipsec0",
+        "internal": false,
+        "mac": "00:00:00:00:00:00",
+        "address": "fe80::f65c:89ff:feaf:afef",
+        "netmask": "ffff:ffff:ffff:ffff::",
+        "family": "IPv6",
+        "scopeid": 13
+      }
+    ],
+    "host": "zookyBOOK.local"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    {
+      "pc": "0x000000010014d93c",
+      "symbol": "report::TriggerNodeReport(v8::Isolate*, node::Environment*, char const*, char const*, std::__1::basic_string<char, std::__1::char_traits<char>, std::__1::allocator<char> > const&, v8::Local<v8::String>) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x000000010007e87b",
+      "symbol": "node::OnFatalError(char const*, char const*) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x0000000100176137",
+      "symbol": "v8::Utils::ReportOOMFailure(v8::internal::Isolate*, char const*, bool) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x00000001001760d3",
+      "symbol": "v8::internal::V8::FatalProcessOutOfMemory(v8::internal::Isolate*, char const*, bool) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x00000001002fa185",
+      "symbol": "v8::internal::Heap::FatalProcessOutOfMemory(char const*) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x00000001002cd861",
+      "symbol": "v8::internal::Factory::NewFixedArrayWithFiller(v8::internal::RootIndex, int, v8::internal::Object, v8::internal::AllocationType) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x000000010042eaaa",
+      "symbol": "v8::internal::(anonymous namespace)::ElementsAccessorBase<v8::internal::(anonymous namespace)::FastPackedSmiElementsAccessor, v8::internal::(anonymous namespace)::ElementsKindTraits<(v8::internal::ElementsKind)0> >::GrowCapacity(v8::internal::Handle<v8::internal::JSObject>, unsigned int) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x00000001005d1bc4",
+      "symbol": "v8::internal::Runtime_GrowArrayElements(int, unsigned long*, v8::internal::Isolate*) [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    },
+    {
+      "pc": "0x000000010092fa99",
+      "symbol": "Builtins_CEntry_Return1_DontSaveFPRegs_ArgvOnStack_NoBuiltinExit [/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node]"
+    }
+  ],
+  "javascriptHeap": {
+    "totalMemory": 2876489728,
+    "totalCommittedMemory": 2844016256,
+    "usedMemory": 2841566936,
+    "availableMemory": 16989384,
+    "memoryLimit": 2197815296,
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": 262144,
+        "committedMemory": 32568,
+        "capacity": 261872,
+        "used": 32296,
+        "available": 229576
+      },
+      "new_space": {
+        "memorySize": 33554432,
+        "committedMemory": 1929936,
+        "capacity": 16759808,
+        "used": 0,
+        "available": 16759808
+      },
+      "old_space": {
+        "memorySize": 1945600,
+        "committedMemory": 1589704,
+        "capacity": 1229944,
+        "used": 1229944,
+        "available": 0
+      },
+      "code_space": {
+        "memorySize": 425984,
+        "committedMemory": 178976,
+        "capacity": 159040,
+        "used": 159040,
+        "available": 0
+      },
+      "map_space": {
+        "memorySize": 266240,
+        "committedMemory": 249744,
+        "capacity": 177840,
+        "used": 177840,
+        "available": 0
+      },
+      "large_object_space": {
+        "memorySize": 1888440320,
+        "committedMemory": 1888440320,
+        "capacity": 1888419392,
+        "used": 1888419392,
+        "available": 0
+      },
+      "code_large_object_space": {
+        "memorySize": 49152,
+        "committedMemory": 49152,
+        "capacity": 3552,
+        "used": 3552,
+        "available": 0
+      },
+      "new_large_object_space": {
+        "memorySize": 951545856,
+        "committedMemory": 951545856,
+        "capacity": 951544872,
+        "used": 951544872,
+        "available": 0
+      }
+    }
+  },
+  "resourceUsage": {
+    "userCpuSeconds": 2.51435,
+    "kernelCpuSeconds": 1.25324,
+    "cpuConsumptionPercent": 75.3519,
+    "maxRss": 2822829506560,
+    "pageFaults": {
+      "IORequired": 73,
+      "IONotRequired": 830993
+    },
+    "fsActivity": {
+      "reads": 0,
+      "writes": 0
+    }
+  },
+  "libuv": [
+  ],
+  "environmentVariables": {
+    "rvm_bin_path": "/Users/zookymac/.rvm/bin",
+    "TERM_PROGRAM": "vscode",
+    "NVM_CD_FLAGS": "",
+    "GEM_HOME": "/Users/zookymac/.rvm/gems/ruby-2.6.1",
+    "SHELL": "/bin/bash",
+    "TERM": "xterm-256color",
+    "IRBRC": "/Users/zookymac/.rvm/rubies/ruby-2.6.1/.irbrc",
+    "TMPDIR": "/var/folders/30/g0jnc1b50yqdz48_lzx1qw5m0000gn/T/",
+    "TERM_PROGRAM_VERSION": "1.48.0",
+    "ORIGINAL_XDG_CURRENT_DESKTOP": "undefined",
+    "MY_RUBY_HOME": "/Users/zookymac/.rvm/rubies/ruby-2.6.1",
+    "TERM_SESSION_ID": "479ECC56-4C63-4E5E-9903-E763F3AEB512",
+    "GIT_EDITOR": "atom",
+    "NVM_DIR": "/Users/zookymac/.nvm",
+    "SVN_EDITOR": "atom",
+    "USER": "zookymac",
+    "USR_PATHS": "/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin",
+    "rvm_path": "/Users/zookymac/.rvm",
+    "SSH_AUTH_SOCK": "/private/tmp/com.apple.launchd.RPUUAFXReT/Listeners",
+    "__CF_USER_TEXT_ENCODING": "0x1F5:0x0:0x0",
+    "rvm_prefix": "/Users/zookymac",
+    "PATH": "/Users/zookymac/.rvm/gems/ruby-2.6.1/bin:/Users/zookymac/.rvm/gems/ruby-2.6.1@global/bin:/Users/zookymac/.rvm/rubies/ruby-2.6.1/bin:/Users/zookymac/.rvm/bin:/Users/zookymac/.nvm/versions/node/v12.12.0/bin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Applications/Postgres.app/Contents/Versions/latest/bin:/usr/local:/usr/local/sbin",
+    "PWD": "/Users/zookymac/Development/tips/powerOfTwo",
+    "EDITOR": "atom",
+    "LANG": "en_US.UTF-8",
+    "NODE_PATH": "/usr/local/lib/node_modules:/usr/local/lib/node_modules:",
+    "XPC_FLAGS": "0x0",
+    "PS1": "\\[\\e]2;\\u@\\h\\a[\\[\\e[37;44;1m\\]\\t\\[\\e[0m\\]]\\[\\e[0;31m\\]$(parse_git_branch) \\[\\e[0;32m\\]\\W\\n\\[\\e[0;34m\\]//\\[\\e[0;31m\\] ♥ \\[\\e[0m\\]",
+    "GIT_MERGE_AUTOEDIT": "no",
+    "XPC_SERVICE_NAME": "0",
+    "rvm_version": "1.29.9 (latest)",
+    "SHLVL": "3",
+    "HOME": "/Users/zookymac",
+    "VSCODE_GIT_ASKPASS_MAIN": "/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js",
+    "APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL": "true",
+    "rvm_ruby_string": "ruby-2.6.1",
+    "LOGNAME": "zookymac",
+    "VISUAL": "atom",
+    "VSCODE_GIT_IPC_HANDLE": "/var/folders/30/g0jnc1b50yqdz48_lzx1qw5m0000gn/T/vscode-git-0799055de6.sock",
+    "GEM_PATH": "/Users/zookymac/.rvm/gems/ruby-2.6.1:/Users/zookymac/.rvm/gems/ruby-2.6.1@global",
+    "NVM_BIN": "/Users/zookymac/.nvm/versions/node/v12.12.0/bin",
+    "VSCODE_GIT_ASKPASS_NODE": "/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)",
+    "GIT_ASKPASS": "/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh",
+    "rvm_delete_flag": "0",
+    "FLATIRON_VERSION": "1.1.1",
+    "RUBY_VERSION": "ruby-2.6.1",
+    "COLORTERM": "truecolor",
+    "_": "/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node"
+  },
+  "userLimits": {
+    "core_file_size_blocks": {
+      "soft": 0,
+      "hard": "unlimited"
+    },
+    "data_seg_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "file_size_blocks": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_locked_memory_bytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_memory_size_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "open_files": {
+      "soft": 10240,
+      "hard": "unlimited"
+    },
+    "stack_size_bytes": {
+      "soft": 8388608,
+      "hard": 67104768
+    },
+    "cpu_time_seconds": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    },
+    "max_user_processes": {
+      "soft": 1392,
+      "hard": 2088
+    },
+    "virtual_memory_kbytes": {
+      "soft": "unlimited",
+      "hard": "unlimited"
+    }
+  },
+  "sharedObjects": [
+    "/Users/zookymac/.nvm/versions/node/v12.12.0/bin/node",
+    "/System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation",
+    "/usr/lib/libSystem.B.dylib",
+    "/usr/lib/libc++.1.dylib",
+    "/usr/lib/libobjc.A.dylib",
+    "/usr/lib/libfakelink.dylib",
+    "/usr/lib/libDiagnosticMessagesClient.dylib",
+    "/usr/lib/libicucore.A.dylib",
+    "/usr/lib/libz.1.dylib",
+    "/usr/lib/libc++abi.dylib",
+    "/usr/lib/system/libcache.dylib",
+    "/usr/lib/system/libcommonCrypto.dylib",
+    "/usr/lib/system/libcompiler_rt.dylib",
+    "/usr/lib/system/libcopyfile.dylib",
+    "/usr/lib/system/libcorecrypto.dylib",
+    "/usr/lib/system/libdispatch.dylib",
+    "/usr/lib/system/libdyld.dylib",
+    "/usr/lib/system/libkeymgr.dylib",
+    "/usr/lib/system/liblaunch.dylib",
+    "/usr/lib/system/libmacho.dylib",
+    "/usr/lib/system/libquarantine.dylib",
+    "/usr/lib/system/libremovefile.dylib",
+    "/usr/lib/system/libsystem_asl.dylib",
+    "/usr/lib/system/libsystem_blocks.dylib",
+    "/usr/lib/system/libsystem_c.dylib",
+    "/usr/lib/system/libsystem_configuration.dylib",
+    "/usr/lib/system/libsystem_coreservices.dylib",
+    "/usr/lib/system/libsystem_darwin.dylib",
+    "/usr/lib/system/libsystem_dnssd.dylib",
+    "/usr/lib/system/libsystem_featureflags.dylib",
+    "/usr/lib/system/libsystem_info.dylib",
+    "/usr/lib/system/libsystem_m.dylib",
+    "/usr/lib/system/libsystem_malloc.dylib",
+    "/usr/lib/system/libsystem_networkextension.dylib",
+    "/usr/lib/system/libsystem_notify.dylib",
+    "/usr/lib/system/libsystem_sandbox.dylib",
+    "/usr/lib/system/libsystem_secinit.dylib",
+    "/usr/lib/system/libsystem_kernel.dylib",
+    "/usr/lib/system/libsystem_platform.dylib",
+    "/usr/lib/system/libsystem_pthread.dylib",
+    "/usr/lib/system/libsystem_symptoms.dylib",
+    "/usr/lib/system/libsystem_trace.dylib",
+    "/usr/lib/system/libunwind.dylib",
+    "/usr/lib/system/libxpc.dylib"
+  ]
+}
