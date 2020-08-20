@@ -36,27 +36,46 @@
 // 1 <= num_people <= 1000
 
 
-var distributeCandies = function(candies, num_people) {
+// var distributeCandies = function(candies, num_people) {
+//   let result = new Array(num_people).fill(0);
+//   let num = 1;
+//   while (candies > 0) {
+//       for (let i = 0; i < num_people; i++) {
+//           if (candies >= i + num) {
+//               result[i] += i + num;
+//               candies -= i + num;
+//           } else {
+//               if (candies > 0) {
+//                   result[i] += candies;
+//                   return result;
+//               } else {
+//                   return result;
+//               }
+//           }
+//       }  
+//       num += num_people;
+//   }
+//   return result;
+// };
+
+
+function distributeCandies(candies, num_people) {
   let result = new Array(num_people).fill(0);
-  let num = 1;
+  let i = 1;
+  let pos = 0;
   while (candies > 0) {
-      for (let i = 0; i < num_people; i++) {
-          if (candies >= i + num) {
-              result[i] += i + num;
-              candies -= i + num;
-          } else {
-              if (candies > 0) {
-                  result[i] += candies;
-                  return result;
-              } else {
-                  return result;
-              }
-          }
-      }  
-      num += num_people;
+    if (candies >= i) {
+      result[pos] += i;
+      candies -= i;
+    } else {
+      result[pos] += candies;
+      return result;
+    }
+    i++;
+    pos < num_people - 1 ? pos += 1 : pos = 0;
   }
   return result;
-};
+}
 
 
 console.log(distributeCandies(7,4)); // => [1,2,3,1]
